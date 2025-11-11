@@ -1,0 +1,105 @@
+
+:root{
+  --red:#E50914;
+  --red-dark:#B00610;
+  --black:#000000;
+  --gray-900:#141414;
+  --gray-700:#1A1A1A;
+  --text:#FFFFFF;
+  --muted:#B3B3B3;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--black);
+  color: var(--text);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.logo{ letter-spacing:1px; }
+.slogan{ font-weight:300; }
+
+/* Barra de busqueda */
+.navbar .nav-link{
+  transition: all .2s ease;
+}
+.navbar .nav-link:hover{
+  color: var(--red) !important;
+}
+.navbar-brand{ color: #fff !important; }
+.navbar-brand:hover{ color: var(--red) !important; }
+
+/* Cards películas */
+.movie-card{
+  border: 1px solid rgba(229,9,20,.35);
+  transition: transform .2s ease, box-shadow .2s ease, background-color .3s ease, color .3s ease;
+}
+.movie-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(229,9,20,.25);
+}
+
+/* Trailer boxes */
+.trailer-box{ background:#000; }
+
+/* Footer */
+footer{ font-size: .95rem; }
+
+/* Modo CLARO (invertido: fondo blanco, texto negro) */
+.modo-claro{
+  background: #fff !important;
+  color:#000 !important;
+}
+.modo-claro .bg-dark{ background:#fff !important; }
+.modo-claro .text-light{ color:#000 !important; }
+.modo-claro .navbar, .modo-claro footer{
+  background:#fff !important;
+  color:#000 !important;
+  border-color: var(--red) !important;
+}
+.modo-claro .navbar-brand, .modo-claro .nav-link{ color:#000 !important; }
+.modo-claro .nav-link:hover{ color: var(--red) !important; }
+.modo-claro .movie-card{ background:#f9f9f9 !important; color:#000 !important; border:1px solid #ccc; }
+.modo-claro .border-danger{ border-color: var(--red) !important; }
+.modo-claro .text-danger{ color: var(--red) !important; }
+
+/* Botones */
+.btn-danger{
+  background: var(--red);
+  border-color: var(--red);
+}
+.btn-danger:hover{
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+}
+
+/* Focus accesible */
+:focus-visible{
+  outline: 3px dashed var(--red);
+  outline-offset: 2px;
+}
+
+
+/* --- Mejorar visibilidad en modo claro --- */
+.modo-claro footer, .modo-claro footer a {
+  color: #000 !important;
+}
+.modo-claro #themeToggle {
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.modo-claro #themeToggle:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+/* --- Enlaces de 'Ver fuente' visibles en modo claro --- */
+.modo-claro a.link-light {
+  color: #000 !important;
+}
+.modo-claro a.link-light:hover {
+  color: var(--red) !important;
+}
